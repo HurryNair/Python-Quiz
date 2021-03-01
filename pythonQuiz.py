@@ -1,24 +1,31 @@
 def q1():
 	print("hello" * 5)
+# 'hellohellohellohello"
 
 def q2():
 	x, y = 4, 5
 	y, x = x, y
 	print(x)
 	print(y)
+# 5
+# 4
 
 def q3():
 	z = 9
 	lst = [0] * z
 	print(lst[:-1])
+# 0
 
 def q4():
 	def help(x):
 		return x % 2 == 0
 
-	lst = [i**2 for i in range(10)] 
-	lst = filter(help, lst) 
-	print(list(lst)[::2]) 
+	lst = [i**2 for i in range(10)]
+	# [0, 1, 4, 9, 16, 25, 36, 49, 64, 81] 
+	lst = filter(help, lst)
+	#list(lst) = [0, 4, 16, 36, 64] 
+	print(list(lst)[::2])
+	# [0, 16, 64]
 
 def q5():
 	z = 0
@@ -30,6 +37,15 @@ def q5():
 			print(z)
 	else:
 		print('end')
+	# BODMAS
+	# In (i + 1 // 2) floor div happens first
+	# i = 1; z = 0
+	# i = 2; z = 1
+	# i = 3; z = 1
+	# i = 4; z = 2
+	# i = 5; z = 2
+	# i = 6; z = 3 
+	# The else block just after for/while is executed only when the loop is NOT terminated by a break statement.
 
 def q6():
 	import math
@@ -40,7 +56,9 @@ def q6():
 			break
 	else:
 		print('no')
-
+	# This can not be true for any value of range(n)
+	# no
+	
 def q7():
 	class A:
 		def __init__(self, x):
